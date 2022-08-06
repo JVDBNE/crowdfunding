@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+#project-list {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 10%;
+  row-gap: 10%;
+}

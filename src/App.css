@@ -39,10 +39,12 @@
 
 #project-list {
   display: grid;
-  
-  grid-template-columns: 24% 24% 24%;
-  column-gap: 10%;
+  grid-template-columns: 26% 26% 26%;
+  column-gap: 11%;
   row-gap: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
 }
 
 nav {

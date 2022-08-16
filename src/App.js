@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from"react-router-dom";
 import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
+import LoginPage from "./pages/LoginPage";
 import "./App.css";
 
 
@@ -12,8 +13,9 @@ function App() {
     <div>
     <Nav />
     <Routes>
-        <Route exact path="/" element= {<HomePage/>}/>
-        <Route exact path ="/ProjectPage"element= {<ProjectPage/>}/>
+        <Route path="/" element= {<HomePage/>}/>
+        <Route path ="/project/:id" element= {<ProjectPage/>}/>
+        <Route path="/login" element= {<LoginPage />}/>
     </Routes>
     </div>
     </Router>

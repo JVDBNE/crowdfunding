@@ -1,8 +1,7 @@
 .project-card {
     width: 100%;
-    
-    
     border-radius: 25%;
+    
 }
 
 .project-card img {
@@ -10,6 +9,7 @@
     height: 450px;
     object-fit: cover;
     border-radius: 25%;
+    border: solid white 4px;
 }
 
 

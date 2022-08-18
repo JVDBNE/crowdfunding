@@ -63,4 +63,18 @@ h3 {
   color: black;
 
 }
+h1 {
+  font-size: 5rem;
+  color: whitesmoke;
+  text-align: center;
+}
+
+:root {
+  background-color: #9F9FED;
+
+}
+
+
+
+
 

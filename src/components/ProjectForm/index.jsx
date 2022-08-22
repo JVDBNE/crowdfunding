@@ -43,45 +43,61 @@ const handleSubmit = (event) => {
 
 
     return (
-    <form>
+    <form className="form-box">
     <div>
-    <label htmlFor="title">Project Title:</label>
+    <h2>Welcome to STAGELY</h2>
+    </div>
+    <div>
+    <p>A STAGELY project page is fairly simple but allows for a tremendous amount of variation and creativity. 
+    you’ll bring every aspect of your campaign into focus—for yourself and, eventually, your backers.</p>
+    </div>
+    <div>
     <input 
         type="text"
         id="title"
+        className="title-field"
         placeholder="Enter Project Title"
         onChange={handleChange}
         />
     </div>
     <div>
-    <label htmlFor="description">Project Description:</label>
-    <input
+    <input 
         type="text"
         id="description"
-        placeholder="Enter Project Description"
+        className="description-field"
+        placeholder="Tell us about your Project"
         onChange={handleChange}
         />
     </div>
     <div>
-    <label htmlFor="image">Project Image:</label>
-    <input
+    <input 
         type="url"
         id="image"
+        className="url-field"
         placeholder="Image URL"
         onChange={handleChange}
         />
     </div>
     <div>
-    <label htmlFor="date">Date Opened</label>
-    <input
+    <input 
         type="date"
         id="date"
+        className="date-field"
         placeholder="DD/MM/YYYY"
         onChange={handleChange}
         />
     </div>
+    <div>
+    <input 
+        type="money"
+        id="date"
+        className="goal-field"
+        placeholder="$$$ Goal"
+        onChange={handleChange}
+        />
+    </div>
 
-    <button type="submit" onClick={handleSubmit}>
+    <button type="submit" className="btn"onClick={handleSubmit}>
     Create Project
     </button>
     </form>

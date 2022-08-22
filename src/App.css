@@ -48,14 +48,29 @@
 }
 
 nav {
-  padding: 40px;
+  padding: 20px;
   text-align: end;
 }
 
 a {
+  background-color: #736ced;
+  font-size: large;
+  font-weight: bold;
+  color: #fef9ff;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: d4c1ec;
   font-size: medium;
   color: black;
-  padding: 5px;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
 h3 {
@@ -64,9 +79,12 @@ h3 {
 
 }
 h1 {
-  font-size: 5rem;
+  font-size: 8rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: whitesmoke;
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 :root {
@@ -74,7 +92,16 @@ h1 {
 
 }
 
+.project-wrapper {
+  width: 50%;
+  text-align: left;
+  padding-left: 8%;
 
+}
 
+.pledge-box {
+  padding: 10px;
+  font-size: larger;
+}
 
 

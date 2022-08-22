@@ -19,25 +19,26 @@ function ProjectPage() {
     return (
         <div className="project-wrapper">
             <div className="project=title">
-                <h1>{projectData.title}</h1>
-                <h2>Created: {new Date(projectData.date_created).toDateString()}</h2>
+                <h2>{projectData.title}</h2>
+                <h4>Created: {new Date(projectData.date_created).toDateString()}</h4>
             </div>
             <div className="project-details">
                 <img className="project-img" src={projectData.image} alt="project image"/>
                 <h2>About Our Project:</h2>
                 <text id="description">{projectData.description}</text>
             </div> 
-        <h2>{`Status: ${projectData.is_open ? "Currently Seeking Donations" : "This Project is now Closed" }`}</h2>
+        <h4>{`Status: ${projectData.is_open ? "Currently Seeking Donations" : "This Project is now Closed" }`}</h4>
         
         <h2>Pledges:</h2>
-        <ul>
+        <ul >
         {projectData.pledges.map((pledgeData, key) => {
             return (
-            <li key = {key}>
-            {pledgeData.amount} from {pledgeData.supporter}
+            <div  className="pledge-box">
+            <li  key = {key}>
+            ${pledgeData.amount} from {pledgeData.supporter}<br />
             {pledgeData.comment}
-
             </li>
+            </div>
             );
         })}
         </ul>

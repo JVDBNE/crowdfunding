@@ -4,16 +4,17 @@ import "./styles.css";
 
 
 
-const LoginForm = () => { 
+const NewUserForm = () => { 
     const navigate = useNavigate()
-    const [credentials, setCredentials] = useState({
+    const [newcredentials, setNewCredentials] = useState({
         username: "",
+        email:"",
         password: "",
     });
 
     const handleChange = (event) => {
         const { id, value } = event.target;
-        setCredentials((prevCredentials) => ({
+        setNewCredentials((prevCredentials) => ({
         ...prevCredentials,
         [id]: value,
     }));
@@ -21,12 +22,12 @@ const LoginForm = () => {
 
     const postData = async () => {
         const response = await fetch(
-        `${process.env.REACT_APP_API_URL}api-token-auth/`, {
+        `${process.env.REACT_APP_API_URL}users/`, {
         method: "post",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(credentials),
+        body: JSON.stringify(newcredentials),
         }
         );
         return response.json();
@@ -34,9 +35,8 @@ const LoginForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (credentials.username && credentials.password) {
+        if (newcredentials.email && newcredentials.password) {
             postData().then((response) => {
-            window.localStorage.setItem('token', response.token);
             navigate("/");       
             });
         }
@@ -46,10 +46,12 @@ const LoginForm = () => {
     return (
         <form className="form-box">
         <div>
-        <h2>Please Sign In</h2>
+        <h2>Sign up to Create or Pledge</h2>
         </div>
         <div>
-        <label htmlFor="username">Username:</label>
+        <p>Bring a creative project to life or start your own in just a few steps</p>
+        </div>
+        <div>
         <input 
             type="text"
             id="username"
@@ -59,7 +61,15 @@ const LoginForm = () => {
             />
         </div>
         <div>
-        <label htmlFor="password">Password:</label>
+        <input
+            type="email"
+            id="email"
+            className="email"
+            placeholder="Email"
+            onChange={handleChange}
+            />
+        </div>
+        <div>
         <input
             type="password"
             id="password"
@@ -69,9 +79,9 @@ const LoginForm = () => {
             />
         </div>
         <button type="submit" className="btn" onClick={handleSubmit}>
-        Login
+        Create an Account
         </button>
         </form>
     );
 }
-export default LoginForm;
+export default NewUserForm;

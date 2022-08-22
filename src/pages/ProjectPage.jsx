@@ -27,7 +27,7 @@ function ProjectPage() {
                 <h2>About Our Project:</h2>
                 <text id="description">{projectData.description}</text>
             </div> 
-        <h2>{`Status: ${projectData.is_open}`}</h2>
+        <h2>{`Status: ${projectData.is_open ? "Currently Seeking Donations" : "This Project is now Closed" }`}</h2>
         
         <h2>Pledges:</h2>
         <ul>

@@ -21,7 +21,7 @@ const ProjectForm = () => {
 
 const postProjectData = async () => {
     const response = await fetch(
-    `${process.env.REACT_APP_API_URL}/projects`, {
+    `${process.env.REACT_APP_API_URL}projects`, {
     method: "post",
     headers: {
         "Content-Type": "application/json",
@@ -36,8 +36,7 @@ const handleSubmit = (event) => {
     event.preventDefault();
     if (projectinfo.title && projectinfo.description) {
         postProjectData().then((response) => {
-        window.localStorage.setItem('token', response.token);
-        navigate("/project/${id}");       
+        navigate(`/`);       
         });
     }
 };

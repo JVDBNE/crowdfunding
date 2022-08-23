@@ -52,46 +52,36 @@ const handleSubmit = (event) => {
     you’ll bring every aspect of your campaign into focus—for yourself and, eventually, your backers.</p>
     </div>
     <div>
-    <input 
+    <input className="project-field"
         type="text"
-        id="title"
-        className="title-field"
         placeholder="Enter Project Title"
         onChange={handleChange}
         />
     </div>
     <div>
-    <input 
-        type="text"
-        id="description"
-        className="description-field"
+    <input className="project-field"
+        type="textarea"
         placeholder="Tell us about your Project"
         onChange={handleChange}
         />
     </div>
     <div>
-    <input 
+    <input className="project-field"
         type="url"
-        id="image"
-        className="url-field"
         placeholder="Image URL"
         onChange={handleChange}
         />
     </div>
     <div>
-    <input 
+    <input className="project-field"
         type="date"
-        id="date"
-        className="date-field"
         placeholder="DD/MM/YYYY"
         onChange={handleChange}
         />
     </div>
     <div>
-    <input 
+    <input className="project-field"
         type="money"
-        id="date"
-        className="goal-field"
         placeholder="$$$ Goal"
         onChange={handleChange}
         />

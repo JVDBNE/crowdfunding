@@ -18,17 +18,7 @@ h2{
 }
 
 
-
-.form-box {
-    background:white;
-    width:800px;
-    border-radius:6px;
-    margin: 0 auto 0 auto;
-    padding:0px 0px 40px 0px;
-    border: #f3f9fe 4px solid; 
-}
-
-.title-field, .description-field, .goal-field, .date-field, .url-field {
+.project-field {
     background:#ecf0f1;
     border: #ccc 1px solid;
     border-bottom: #ccc 2px solid;

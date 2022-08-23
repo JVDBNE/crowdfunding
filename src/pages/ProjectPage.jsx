@@ -1,23 +1,28 @@
+
 import React , { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import LoadingSpinner from "../components/spinner";
 
 function ProjectPage() {
+    const [loading, setLoading] = useState(false)
     const [projectData, setProjectData] = useState({pledges: [] });
     const { id } = useParams();
 
     useEffect(() => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}projects/${id}`)
         .then((results) => {
         return results.json();
         })
         .then((data) => {
         setProjectData(data);
+        setLoading(false)
         });
     }, []);
 
     return (
         <div className="project-wrapper">
+            {loading ? <LoadingSpinner /> : <div>
             <div className="project=title">
                 <h2>{projectData.title}</h2>
                 <h4>Created: {new Date(projectData.date_created).toDateString()}</h4>
@@ -43,9 +48,9 @@ function ProjectPage() {
         })}
         </ul>
         </div>
-    );
+    }
+        </div>);
 }
 
 export default ProjectPage;
-
 

@@ -39,19 +39,16 @@ function ProjectPage() {
         
         
         <h2>Pledges:</h2>
-        <ul >
+        <div >
         {projectData.pledges.map((pledgeData, key) => {
             return (
-            <div  className="pledge-box">
-            <li  key = {key}>
+            <div  className="pledge-box" key = {key}>
             ${pledgeData.amount} from {pledgeData.supporter}<br />
             {pledgeData.comment}
-            </li>
-            
-        </div>   
+            </div>   
             );
         })}
-        </ul>
+        </div>
         </div>
     }
         </div>);

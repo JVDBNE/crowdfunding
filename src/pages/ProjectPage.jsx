@@ -26,7 +26,7 @@ function ProjectPage() {
             {loading ? <LoadingSpinner /> : <div>
             <div className="project=title"> 
                 <h2>{projectData.title}</h2>
-                <button type="submit" className="pledge-button" onClick={alert("Feature Coming Soon! Check back shortly...")}>Pledge Here! </button>
+                <button type="submit" className="pledge-button">Pledge Here! </button>
                 <h4>Created: {new Date(projectData.date_created).toDateString()}</h4>
             </div>
             <div className="project-details">

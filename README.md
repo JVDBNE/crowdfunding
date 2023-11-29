@@ -1,3 +1,9 @@
+
+[Project requires redeployment via iFly]
+
+
+
+
 Welcome to my Crowdfunding Project - Made as part of the final project module with She Codes Australia. 
 
 The backend was created using Django/DRF whilst the frontend - ReactJS.
